@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./weather.css";
+import FormatDate from "../FormatDate/formatDate";
+import WeatherTemp from "../WeatherTemp/weatherTemp";
 
 export default function Weather(props) {
   let [city, setCity] = useState("Mijas");
@@ -20,6 +22,7 @@ export default function Weather(props) {
   function showCity(response) {
     setApiSearch(response.data);
     console.log(response.data);
+    // setApiSearch(new Date(response.data.dt * 1000));
   }
 
   function handleSubmit(event) {
@@ -42,15 +45,18 @@ export default function Weather(props) {
         <p className="cityName">{apiSearch.name}</p>
         <div className="row">
           <div className="col-12 col-sm-6">
-            <ul className="info1">
-              <li>Monday 07.00</li>
-              <li>Sunny</li>
+            <ul className="info">
+              <li>
+                <FormatDate date={new Date(apiSearch.dt)}></FormatDate>
+              </li>
+              <li>{apiSearch.weather[0].description}</li>
             </ul>
           </div>
 
           <div className="col-12 col-sm-6">
-            <ul className="info2">
-              <li>Temperature: {Math.round(apiSearch.main.temp)} °C</li>
+            <ul className="info">
+              <WeatherTemp celcius={Math.round(apiSearch.main.temp)} />
+              {/* <li>Temperature: {Math.round(apiSearch.main.temp)} °C | F</li> */}
               <li>Humidity: {apiSearch.main.humidity} %</li>
               <li>Wind: {Math.round(apiSearch.wind.speed)} km/h</li>
             </ul>
@@ -62,7 +68,15 @@ export default function Weather(props) {
           className="icon"
         />
         <p className="author">
-          This project was coded by Erika Stahl and is open-sourced on GitHub
+          This project was coded by <strong>Erika Stahl</strong> and is
+          open-sourced on{" "}
+          <a
+            href="https://github.com/Stahl-84/ReactWeatherApp"
+            className="link text-dark"
+            target="_blank"
+          >
+            <strong>GitHub</strong>
+          </a>
         </p>
       </div>
     );

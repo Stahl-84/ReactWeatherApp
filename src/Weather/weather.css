@@ -25,14 +25,13 @@ input {
   margin-left: 10px;
 }
 
-.info1 {
+.info {
   text-align: center;
   list-style: none;
 }
 
-.info2 {
-  text-align: center;
-  list-style: none;
+.info > li:first-letter {
+  text-transform: uppercase;
 }
 
 .icon {
@@ -51,6 +50,10 @@ input {
   text-align: center;
   margin-top: 50px;
   margin-left: 10px;
+}
+
+.link {
+  text-decoration: none;
 }
 
 @media (max-width: 567px) {
