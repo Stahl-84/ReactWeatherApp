@@ -68,8 +68,9 @@ export default function Weather(props) {
           className="icon"
         />
         <p className="author">
-          This project was coded by <strong>Erika Stahl</strong> and is
-          open-sourced on{" "}
+          This project was coded by{" "}
+          <strong className="text-dark">Erika Stahl</strong> and is open-sourced
+          on{" "}
           <a
             href="https://github.com/Stahl-84/ReactWeatherApp"
             className="link text-dark"
