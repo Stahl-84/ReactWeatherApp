@@ -10,7 +10,7 @@ export default function Weather(props) {
 
   useEffect(() => {
     handleSearch();
-  }, []);
+  });
 
   function handleSearch() {
     let apiKey = "add35dfe5082c9006db11e86b2d079d0";
@@ -75,6 +75,7 @@ export default function Weather(props) {
             href="https://github.com/Stahl-84/ReactWeatherApp"
             className="link text-dark"
             target="_blank"
+            rel="noreferrer"
           >
             <strong>GitHub</strong>
           </a>
