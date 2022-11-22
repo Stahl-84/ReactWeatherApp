@@ -1,0 +1,57 @@
+input {
+  border-radius: 5px;
+}
+
+.container {
+  width: 650px;
+}
+
+.weatherapp {
+  border: 2px solid grey;
+  margin-top: 50px;
+  border-radius: 5px;
+}
+
+.form {
+  text-align: center;
+  margin-top: 25px;
+  margin-left: 10px;
+}
+
+.cityName {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bolder;
+  margin-left: 10px;
+}
+
+.info1 {
+  text-align: center;
+  list-style: none;
+}
+
+.info2 {
+  text-align: center;
+  list-style: none;
+}
+
+.icon {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.head {
+  display: block;
+  margin: 0 auto;
+}
+
+.author {
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 10px;
+}
+
+@media (max-width: 567px) {
+}
