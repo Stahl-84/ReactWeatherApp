@@ -10,7 +10,7 @@ export default function Weather(props) {
 
   useEffect(() => {
     handleSearch();
-  });
+  }, []);
 
   function handleSearch() {
     let apiKey = "add35dfe5082c9006db11e86b2d079d0";
@@ -22,7 +22,6 @@ export default function Weather(props) {
   function showCity(response) {
     setApiSearch(response.data);
     console.log(response.data);
-    // setApiSearch(new Date(response.data.dt * 1000));
   }
 
   function handleSubmit(event) {
@@ -67,6 +66,7 @@ export default function Weather(props) {
           alt=""
           className="icon"
         />
+
         <p className="author">
           This project was coded by{" "}
           <strong className="text-dark">Erika Stahl</strong> and is open-sourced
