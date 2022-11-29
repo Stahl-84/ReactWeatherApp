@@ -1,5 +1,10 @@
 .WeatherForecast {
   text-align: center;
+  margin-top: 25px;
+  /* border: 2px solid grey;
+  border-radius: 5px;
+  width: 100px;
+  height: 150px; */
 }
 
 .WeatherForecast-temp-min {
