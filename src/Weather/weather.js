@@ -3,13 +3,10 @@ import axios from "axios";
 import "./weather.css";
 import FormatDate from "../FormatDate/formatDate";
 import WeatherTemp from "../WeatherTemp/weatherTemp";
-import WeatherForecast from "../WeatherForecast/weatherForecast";
 
 export default function WeatherNew() {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState("London");
-  const [fiveDays, setFiveDays] = useState([]);
-  const [fiveDaysLoaded, setFiveDaysLoaded] = useState(false);
 
   function handleResponse(response) {
     setWeatherData({
@@ -51,10 +48,10 @@ export default function WeatherNew() {
   //   axios.get(apiUrl).then(handleFiveResponse);
   // }
 
-  function handleFiveResponse(response) {
-    setFiveDays(response);
-    setFiveDaysLoaded(true);
-  }
+  // function handleFiveResponse(response) {
+  //   setFiveDays(response);
+  //   setFiveDaysLoaded(true);
+  // }
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -65,19 +62,19 @@ export default function WeatherNew() {
     setCity(event.target.value);
   }
 
-  function getDay(newDay) {
-    let days = [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday",
-    ];
+  // function getDay(newDay) {
+  //   let days = [
+  //     "Monday",
+  //     "Tuesday",
+  //     "Wednesday",
+  //     "Thursday",
+  //     "Friday",
+  //     "Saturday",
+  //     "Sunday",
+  //   ];
 
-    return days[newDay.getDay() - 1];
-  }
+  //   return days[newDay.getDay() - 1];
+  // }
 
   // function renderFiveDays(data) {
   //   console.log(data);
@@ -122,7 +119,7 @@ export default function WeatherNew() {
             </ul>
           </div>
         </div>
-        <img src={weatherData.icon} />
+        <img src={weatherData.icon} alt="" />
 
         {/* {fiveDaysLoaded ? renderFiveDays(fiveDays) : "Loading..."} */}
 

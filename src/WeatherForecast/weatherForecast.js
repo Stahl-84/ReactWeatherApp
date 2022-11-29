@@ -1,7 +1,6 @@
 import React from "react";
 import "./weatherForecast.css";
 import cloudy from "../Pictures/cloudy.svg";
-import axios from "axios";
 
 export default function WeatherForecast(props) {
   // function handleResponse(response) {
@@ -22,7 +21,7 @@ export default function WeatherForecast(props) {
         <div className="col">
           <div className="WeatherForecast-day">{props.day}</div>
           {/* <div className="icon">{props.icon}</div> */}
-          <img src={cloudy} className="icon" />
+          <img src={cloudy} className="icon" alt="" />
 
           <div className="WeatherForecast-temp">
             <span className="WeatherForecast-temp-max">
