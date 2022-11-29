@@ -27,10 +27,6 @@ export default function WeatherNew() {
     // getFive(response.data);
   }
 
-  useEffect(() => {
-    // handleResponse();
-  }, []);
-
   // function showCity(response) {
   //   setWeatherData(response.data);
   //   console.log(response.data);
